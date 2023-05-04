@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BukuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,14 @@ Route::get('/', function () {
 
 //Route untuk Data Buku
 Route::get('/buku', [BukuController::class, 'bukutampil']);
-Route::post('/buku/tambah','BukuController@bukutambah');
-Route::get('/buku/hapus/{id_buku}','BukuController@bukuhapus');
+Route::post('/buku/tambah', [BukuController::class, 'bukutambah']);
+Route::get('/buku/hapus/{id_buku}', 'BukuController@bukuhapus');
 Route::put('/buku/edit/{id_buku}', 'BukuController@bukuedit');
 
 //Route untuk Data Buku
-Route::get('/home', function(){return view('view_home');});
+Route::get('/home', function () {
+    return view('view_home');
+});
 
 //Route untuk Data Anggota
 Route::get('/anggota', 'AnggotaController@anggotatampil');
@@ -40,6 +43,6 @@ Route::put('/petugas/edit/{id_petugas}', 'PetugasController@petugasedit');
 
 //Route untuk Data Peminjaman
 Route::get('/pinjam', 'PinjamController@pinjamtampil');
-Route::post('/pinjam/tambah','PinjamController@pinjamtambah');
-Route::get('/pinjam/hapus/{id_pinjam}','PinjamController@pinjamhapus');
+Route::post('/pinjam/tambah', 'PinjamController@pinjamtambah');
+Route::get('/pinjam/hapus/{id_pinjam}', 'PinjamController@pinjamhapus');
 Route::put('/pinjam/edit/{id_pinjam}', 'PinjamController@pinjamedit');
