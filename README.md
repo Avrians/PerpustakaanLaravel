@@ -1,4 +1,4 @@
-<h1>Membuat Website Dengan Laravel | Tutorial Laravel | Membuat Web Dari Awal Sampai Selesai | Web</h1>
+Membuat Website Dengan Laravel | Tutorial Laravel | Membuat Web Dari Awal Sampai Selesai | Web
 
 Channel Youtube : Auto Didak <br>
 Link : https://www.youtube.com/watch?v=9xOIEfokSQk&t=1211s&ab_channel=AutoDidak
